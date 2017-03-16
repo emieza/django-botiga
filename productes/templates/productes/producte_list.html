@@ -1,0 +1,21 @@
+
+<html>
+
+<head>
+</head>
+
+<body>
+	<h2>Llista de productes</h2>
+
+	<ul>
+{% for producte in producte_list %}
+    <li><a href="/afegeix/{{producte.id}}">{{producte.nom}}</a> - {{ producte.preu }}</li>
+{% empty %}
+    <li>No articles yet.</li>
+{% endfor %}
+</ul>
+
+
+</body>
+
+</html>
